@@ -9,6 +9,8 @@ public class User
   public String lastName;
   public String email;
   public String password;
+  static Long   counter = 0l;
+  public Long   id;
 
   public User()
   {
@@ -20,6 +22,7 @@ public class User
     this.lastName = lastName;
     this.email = email;
     this.password = password;
+    this.id = counter++;
   }
 
   @Override
@@ -37,4 +40,6 @@ public class User
   {  
      return Objects.hashCode(this.lastName, this.firstName, this.email, this.password);  
   }
+  
+
 }
